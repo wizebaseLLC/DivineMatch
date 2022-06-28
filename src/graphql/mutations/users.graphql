@@ -1,0 +1,68 @@
+mutation CreateUser($input: InputUser!) {
+  createUser(input: $input) {
+    id
+    about
+    firstname
+    lastname
+    email
+    age
+    gender
+    location
+    latitude
+    longitude
+    lookingfor
+    preference
+    profilepic
+    gallery1
+    gallery2
+    gallery3
+    gallery4
+    interest
+    spirituality
+    createdAt
+    updatedAt
+  }
+}
+
+mutation UpdateUser($input: InputUser!, $id: ID!) {
+  updateUser(input: $input, id: $id) {
+    id
+    about
+    firstname
+    lastname
+    email
+    age
+    gender
+    location
+    latitude
+    longitude
+    lookingfor
+    preference
+    profilepic
+    gallery1
+    gallery2
+    gallery3
+    gallery4
+    interest
+    spirituality
+    createdAt
+    updatedAt
+  }
+}
+
+mutation DeleteUser($id: ID!) {
+  deleteUser(id: $id)
+}
+
+mutation UpdateUserTimeStamp($id: ID!) {
+  updateTimestamp(id: $id)
+}
+
+query ListUsersByID($ids: [String!]!) {
+  listUsersById(ids: $ids) {
+    id
+    firstname
+    lastname
+    profilepic
+  }
+}

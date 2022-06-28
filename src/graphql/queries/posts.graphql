@@ -1,0 +1,98 @@
+query FindPost($id: ID!) {
+  findPost(id: $id) {
+    id
+    userId
+    body
+    active
+    firstname
+    lastname
+    location
+    profilepic
+    media {
+      uri
+      mediaType
+    }
+    tags
+    flair
+    flairText
+    createdAt
+    updatedAt
+  }
+}
+
+query ListPost {
+  findManyPost {
+    id
+    userId
+    body
+    active
+    firstname
+    lastname
+    location
+    profilepic
+    media {
+      uri
+      mediaType
+    }
+    tags
+    flair
+    flairText
+    createdAt
+    updatedAt
+  }
+}
+
+query FindCommentsWithPost($id: ID!) {
+  findCommentsWithPostId(postId: $id) {
+    id
+    userId
+    postId
+
+    body
+    active
+    media {
+      uri
+      mediaType
+    }
+    tags
+    flair
+    createdAt
+    updatedAt
+  }
+}
+
+query FindRepliesWithComment($id: ID!) {
+  findRepliesWithCommentId(id: $id) {
+    id
+    userId
+    postCommentId
+    body
+    active
+    media {
+      uri
+      mediaType
+    }
+    tags
+    flair
+    createdAt
+    updatedAt
+  }
+}
+
+query FindLikesByPost($id: ID!) {
+  findLikesByPost(id: $id) {
+    id
+    userId
+    postId
+    createdAt
+  }
+}
+
+query FindLikesByUser($id: ID!) {
+  findLikesByUser(id: $id) {
+    id
+    userId
+    postId
+    createdAt
+  }
+}

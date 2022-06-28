@@ -1,0 +1,6 @@
+subscription UserChange($id: ID!) {
+  userUpdated(mutationType: UPDATED, id: $id) {
+    mutationType
+    id
+  }
+}

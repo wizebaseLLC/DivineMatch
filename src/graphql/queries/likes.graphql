@@ -1,0 +1,13 @@
+query ILikeYou($userId: ID!, $recipientId: String!) {
+  iLikeYou(recipientId: $recipientId, userId: $userId) {
+    userId
+    recipientId
+    likeId
+    isDivine
+    firstname
+    lastname
+    location
+    profilepic
+    updatedAt
+  }
+}

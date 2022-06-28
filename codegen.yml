@@ -1,0 +1,19 @@
+overwrite: true
+schema: 'http://192.168.50.117:8080'
+documents: 'src/graphql/**/*.graphql'
+generates:
+  src/generated/generated.tsx:
+    config:
+      scalars:
+        DateTime: Date
+        JSON: '{[key: string]:any}'
+        UUID: string
+      noNamespaces: true
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      apolloReactHooksImportFrom: '@apollo/client'
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'

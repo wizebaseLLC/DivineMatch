@@ -1,0 +1,27 @@
+mutation CreatePost($input: PostInput!) {
+  createPost(input: $input)
+}
+
+mutation CreatePostLike($input: PostLikeInput!) {
+  createPostLike(input: $input)
+}
+
+mutation MarkPostInactive($id: ID!) {
+  markPostInactive(postId: $id)
+}
+
+mutation MarkPostCommentInactive($id: ID!) {
+  markPostCommentInactive(postId: $id)
+}
+
+mutation MarkPostCommentReplyInactive($id: ID!) {
+  markPostCommentRepliesInactive(postId: $id)
+}
+
+mutation CreatePostComment($input: PostCommentInput!) {
+  createPostComment(input: $input)
+}
+
+mutation CreatePostCommentReply($input: PostCommentRepliesInput!) {
+  createPostCommentReply(input: $input)
+}

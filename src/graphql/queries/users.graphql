@@ -1,0 +1,72 @@
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    about
+    firstname
+    lastname
+    email
+    age
+    gender
+    location
+    latitude
+    longitude
+    lookingfor
+    preference
+    profilepic
+    gallery1
+    gallery2
+    gallery3
+    gallery4
+    interest
+    spirituality
+    createdAt
+    updatedAt
+  }
+}
+
+query MyProfile {
+  myProfile {
+    id
+    about
+    firstname
+    lastname
+    email
+    age
+    gender
+    location
+    latitude
+    longitude
+    lookingfor
+    preference
+    profilepic
+    gallery1
+    gallery2
+    gallery3
+    gallery4
+    interest
+    spirituality
+    createdAt
+    updatedAt
+  }
+}
+
+query ListUser($maxDistance: Float!) {
+  listUsersDeckSwiper(maxDistance: $maxDistance) {
+    id
+    firstname
+    lastname
+    location
+    profilepic
+    distance
+    updatedAt
+  }
+}
+
+query ListUserByName($name: ID!) {
+  listUsersByName(name: $name) {
+    id
+    firstname
+    lastname
+    profilepic
+  }
+}

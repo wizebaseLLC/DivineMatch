@@ -1,0 +1,15 @@
+mutation CreateLike($input: NewLikeInput!) {
+  createLike(input: $input) {
+    id
+    userId
+    recipientId
+    isDivine
+    isMatch
+    createdAt
+    updatedAt
+  }
+}
+
+mutation DeleteLikeByUserRecipient($userId: ID!, $recipientId: String!) {
+  deleteLikeByUserRecipient(userId: $userId, recipientId: $recipientId)
+}
